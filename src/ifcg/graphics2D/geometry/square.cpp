@@ -4,10 +4,10 @@ namespace mesh2D
 {
     Square2D::Square2D(GLuint shaderID)
         : Mesh2D({
-            Vertex2D{1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f },
-            Vertex2D{1.0f, -1.0f, 0.0f, 1.0f, 0.0f, 1.0f },
-            Vertex2D{-1.0f, -1.0f, 0.0f, 1.0f, 1.0f, 1.0f },
-            Vertex2D{-1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f }
+            Vertex{1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f },
+            Vertex{1.0f, -1.0f, 0.0f, 1.0f, 0.0f, 1.0f },
+            Vertex{-1.0f, -1.0f, 0.0f, 1.0f, 1.0f, 1.0f },
+            Vertex{-1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f }
         },
         {
             0, 1, 3,

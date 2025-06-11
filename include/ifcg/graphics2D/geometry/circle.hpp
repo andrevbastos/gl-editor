@@ -10,7 +10,7 @@ namespace mesh2D
     public:
         Circle2D(int precision, GLuint shaderID);
     private:
-        std::vector<Vertex2D> vertices(int precision);
+        std::vector<Vertex> vertices(int precision);
         std::vector<GLuint> indices(int precision);
     };
 }

@@ -4,26 +4,26 @@ namespace mesh3D
 {
     Pyramid3D::Pyramid3D(GLuint shaderID)
         : Mesh3D({
-            Vertex3D{+1.0f, -1.0f, +1.0f, 1.0f, 0.0f, 1.0f, 1.0f},
-            Vertex3D{+1.0f, -1.0f, -1.0f, 1.0f, 0.0f, 1.0f, 1.0f},
-            Vertex3D{-1.0f, -1.0f, -1.0f, 1.0f, 0.0f, 1.0f, 1.0f},
-            Vertex3D{-1.0f, -1.0f, +1.0f, 1.0f, 0.0f, 1.0f, 1.0f},
+            Vertex{+1.0f, -1.0f, +1.0f, 1.0f, 0.0f, 1.0f, 1.0f},
+            Vertex{+1.0f, -1.0f, -1.0f, 1.0f, 0.0f, 1.0f, 1.0f},
+            Vertex{-1.0f, -1.0f, -1.0f, 1.0f, 0.0f, 1.0f, 1.0f},
+            Vertex{-1.0f, -1.0f, +1.0f, 1.0f, 0.0f, 1.0f, 1.0f},
     
-            Vertex3D{-1.0f, -1.0f, +1.0f, 0.0f, 0.0f, 1.0f, 1.0f},
-            Vertex3D{+1.0f, -1.0f, +1.0f, 0.0f, 0.0f, 1.0f, 1.0f},
-            Vertex3D{0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f},
+            Vertex{-1.0f, -1.0f, +1.0f, 0.0f, 0.0f, 1.0f, 1.0f},
+            Vertex{+1.0f, -1.0f, +1.0f, 0.0f, 0.0f, 1.0f, 1.0f},
+            Vertex{0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f},
     
-            Vertex3D{+1.0f, -1.0f, +1.0f, 1.0f, 1.0f, 0.0f, 1.0f},
-            Vertex3D{+1.0f, -1.0f, -1.0f, 1.0f, 1.0f, 0.0f, 1.0f},
-            Vertex3D{0.0f, 1.0f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f},
+            Vertex{+1.0f, -1.0f, +1.0f, 1.0f, 1.0f, 0.0f, 1.0f},
+            Vertex{+1.0f, -1.0f, -1.0f, 1.0f, 1.0f, 0.0f, 1.0f},
+            Vertex{0.0f, 1.0f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f},
     
-            Vertex3D{+1.0f, -1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f},
-            Vertex3D{-1.0f, -1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f},
-            Vertex3D{0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f},
+            Vertex{+1.0f, -1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f},
+            Vertex{-1.0f, -1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f},
+            Vertex{0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f},
     
-            Vertex3D{-1.0f, -1.0f, +1.0f, 0.0f, 1.0f, 0.0f, 1.0f},
-            Vertex3D{-1.0f, -1.0f, -1.0f, 0.0f, 1.0f, 0.0f, 1.0f},
-            Vertex3D{0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f}
+            Vertex{-1.0f, -1.0f, +1.0f, 0.0f, 1.0f, 0.0f, 1.0f},
+            Vertex{-1.0f, -1.0f, -1.0f, 0.0f, 1.0f, 0.0f, 1.0f},
+            Vertex{0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f}
         },
         {
             0, 1, 3,

@@ -7,7 +7,7 @@ namespace mesh2D
     class Mesh2D : public ifcg::Mesh
     {
     public:
-        Mesh2D(std::vector<Vertex2D> vertices, std::vector<GLuint> indices, GLuint shaderID);
+        Mesh2D(std::vector<Vertex> vertices, std::vector<GLuint> indices, GLuint shaderID);
         Mesh2D(const std::vector<Mesh2D*>& meshes, GLuint shaderID);
 
         virtual void draw(glm::mat4 m);
@@ -18,7 +18,7 @@ namespace mesh2D
         virtual void rotate(float angle);
 
     private:
-        std::vector<Vertex2D> vertices;
+        std::vector<Vertex> vertices;
         std::vector<GLuint> indices;
 
         GLuint shaderID;

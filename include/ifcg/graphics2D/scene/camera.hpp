@@ -13,6 +13,8 @@ namespace camera
 		void inputs(GLFWwindow* window);
 		void setPos(glm::vec3 pos);
 
+		glm::mat4 getProjectionMatrix() { return glm::mat4(1.0f); };
+        glm::mat4 getViewMatrix() { return glm::mat4(1.0f); };
 	private:
 		glm::vec3 position = glm::vec3(0.0f, 0.0f, -0.5f);
 		glm::vec3 orientation = glm::vec3(0.0f, 0.0f, -1.0f);

@@ -11,8 +11,7 @@
 #include <glm/glm.hpp>
 #include <glad/glad.h>
 
-#include "ifcg/graphics2D/geometry/vertex.hpp"
-#include "ifcg/graphics3D/geometry/vertex.hpp"
+#include "ifcg/common/vertex.hpp"
 
 namespace vbo
 {
@@ -20,8 +19,7 @@ namespace vbo
     {
     public:
         GLuint _id;
-        VBO(const std::vector<Vertex2D>& vertices);
-        VBO(const std::vector<Vertex3D>& vertices);
+        VBO(const std::vector<Vertex>& vertices);
     
         void bind();
         void unbind();

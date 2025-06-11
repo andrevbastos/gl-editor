@@ -9,8 +9,8 @@ namespace mesh3D
             shaderID
         ) {}
 
-    std::vector<Vertex3D> Sphere3D::vertices(int precision) {
-        std::vector<Vertex3D> vertices;
+    std::vector<Vertex> Sphere3D::vertices(int precision) {
+        std::vector<Vertex> vertices;
 
         const float step = 1.0f / (float)precision;
 
@@ -23,7 +23,7 @@ namespace mesh3D
                 float y = std::cos(theta);
                 float z = std::sin(theta) * std::cos(phi);
     
-                vertices.push_back(Vertex3D{ x, y, z, 1.0f, 0.0f, 0.0f, 0.3f });
+                vertices.push_back(Vertex{ x, y, z, 1.0f, 0.0f, 0.0f, 0.3f });
             }
         }    
     

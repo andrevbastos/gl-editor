@@ -10,11 +10,11 @@ namespace mesh2D
             shaderID
         ) {}
 
-    std::vector<Vertex2D> Circle2D::vertices(int precision) {
-        std::vector<Vertex2D> vertices;
+    std::vector<Vertex> Circle2D::vertices(int precision) {
+        std::vector<Vertex> vertices;
         vertices.reserve(precision + 1);
         
-        vertices.push_back(Vertex2D{ 0.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f });
+        vertices.push_back(Vertex{ 0.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f });
     
         float angleStep = 2.0f * 3.1415926f / precision;
         
@@ -42,7 +42,7 @@ namespace mesh2D
                 default: r = 1; g = 0; b = q;
             }
             
-            vertices.push_back(Vertex2D{ x, y, r, g, b, 1.0f });
+            vertices.push_back(Vertex{ x, y, r, g, b, 1.0f });
         }
     
         return vertices;

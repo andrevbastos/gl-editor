@@ -6,10 +6,7 @@ namespace camera
 		: width(w), height(h) {}
 
 	void Camera3D::update(float FOVdeg, float nearPlane, float farPlane, GLuint shaderID)
-	{
-		glm::mat4 view = glm::mat4(1.0f);
-		glm::mat4 projection = glm::mat4(1.0f);
-
+	{	
 		view = glm::lookAt(position, position + orientation, up);
 		projection = glm::perspective(glm::radians(FOVdeg), (float)width / height, nearPlane, farPlane);
 
@@ -109,5 +106,15 @@ namespace camera
 	void Camera3D::rotate(float angle, glm::vec3 axis)
 	{
 		orientation = glm::rotate(orientation, angle, axis);
+	};
+
+	glm::mat4 Camera3D::getProjectionMatrix()
+	{
+		return projection;
+	};
+
+	glm::mat4 Camera3D::getViewMatrix()
+	{
+		return view;
 	};
 }

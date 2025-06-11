@@ -2,7 +2,7 @@
 
 namespace mesh2D
 {
-    Mesh2D::Mesh2D(std::vector<Vertex2D> vertices, std::vector<GLuint> indices, GLuint shaderID)
+    Mesh2D::Mesh2D(std::vector<Vertex> vertices, std::vector<GLuint> indices, GLuint shaderID)
         : vertices(vertices), indices(indices), shaderID(shaderID)
     {
 		this->vao = vao;
@@ -11,8 +11,8 @@ namespace mesh2D
         VBO vbo(vertices);
         EBO ebo(indices);
 		
-        vao.linkAttrib(vbo, 0, 2, GL_FLOAT, sizeof(Vertex2D), (void*) 0);
-        vao.linkAttrib(vbo, 1, 4, GL_FLOAT, sizeof(Vertex2D), (void*) (2 * sizeof(float)));
+        vao.linkAttrib(vbo, 0, 2, GL_FLOAT, sizeof(Vertex), (void*) 0);
+        vao.linkAttrib(vbo, 1, 4, GL_FLOAT, sizeof(Vertex), (void*) (2 * sizeof(float)));
 
         vao.unbind();
         vbo.unbind();

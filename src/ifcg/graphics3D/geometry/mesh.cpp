@@ -2,7 +2,7 @@
 
 namespace mesh3D
 {
-    Mesh3D::Mesh3D(std::vector<Vertex3D> vertices, std::vector<GLuint> indices, GLuint shaderID)
+    Mesh3D::Mesh3D(std::vector<Vertex> vertices, std::vector<GLuint> indices, GLuint shaderID)
         : vertices(vertices), indices(indices), shaderID(shaderID)
     {
 		this->vao = vao;
@@ -11,8 +11,8 @@ namespace mesh3D
         VBO vbo(vertices);
         EBO ebo(indices);
 		
-        vao.linkAttrib(vbo, 0, 3, GL_FLOAT, sizeof(Vertex3D), (void*) 0);
-        vao.linkAttrib(vbo, 1, 4, GL_FLOAT, sizeof(Vertex3D), (void*) (3 * sizeof(float)));
+        vao.linkAttrib(vbo, 0, 3, GL_FLOAT, sizeof(Vertex), (void*) 0);
+        vao.linkAttrib(vbo, 1, 4, GL_FLOAT, sizeof(Vertex), (void*) (3 * sizeof(float)));
 
         vao.unbind();
         vbo.unbind();

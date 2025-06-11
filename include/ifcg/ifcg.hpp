@@ -60,13 +60,13 @@ namespace ifcg
 		static Shader shader;
 		
 		static std::vector<Mesh*> renderQueue;
+		static GLuint width;
+		static GLuint height;
 	private:
 		IFCG();
 		static void terminate_();
 		
 		static IFCG* instance;
-		static GLuint width;
-		static GLuint height;
 	};
 };
 

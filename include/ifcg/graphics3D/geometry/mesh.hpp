@@ -8,7 +8,7 @@ namespace mesh3D
     {
     public:
         virtual ~Mesh3D() = default;
-        Mesh3D(std::vector<Vertex3D> vertices, std::vector<GLuint> indices, GLuint shaderID);
+        Mesh3D(std::vector<Vertex> vertices, std::vector<GLuint> indices, GLuint shaderID);
 	    Mesh3D(const std::vector<Mesh3D*>& meshes, GLuint shaderID);
 
         virtual void draw(glm::mat4 m);
@@ -21,9 +21,9 @@ namespace mesh3D
 
         virtual void setOutline(bool outline);
 
-    private:
-        std::vector<Vertex3D> vertices;
+        std::vector<Vertex> vertices;
         std::vector<GLuint> indices;
+    private:
 
         GLuint shaderID;
         VAO vao;

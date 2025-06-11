@@ -10,7 +10,7 @@ namespace mesh3D
     public:
         Sphere3D(int precision, GLuint shaderID);
     private:
-        std::vector<Vertex3D> vertices(int precision);
+        std::vector<Vertex> vertices(int precision);
         std::vector<GLuint> indices(int precision);
     };
 };
